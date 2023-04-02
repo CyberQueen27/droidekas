@@ -1,26 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <title>Droidekas</title>
-    <link rel="droideka" type="image/x-icon" href="https://i.kym-cdn.com/photos/images/facebook/001/701/591/7da.jpg">
-</head>
-<style>
-    .body{
-        color: #fdf6d6; 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Droideka Password Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="https://i.kym-cdn.com/photos/images/facebook/001/701/591/7da.jpg"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/frmilky_way_galaxy_star-image-kybd7u7d.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=3e93a726e0d9f7b70fcf557f5cfc9dc7");
     }
-</style>
-
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #feda4a;
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        font-size: 15px;
+        border-radius: 5px;
+        background-color: #1864ab;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+    button:hover{
+        background-color: #feda4a;
+        color:black;
+    }
+    .support ul {
+        text-align: center;
+    }
+    .support ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .support ul li:last-child {
+        margin-right: 0;
+    }
+    .features ul {
+        text-align: left;
+    }
+    .hero h1 {
+        text-align: center;
+        font-size: 36px;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+    }
+    h2 {
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+    }
+    p {
+        font-size: 16px;
+        color: #feda4a;
+        text-align: center;
+    }
+    img.logo {
+        max-width:10%;
+        max-height:10%;
+        position: relative;
+        top: 10px;
+    }
+    li {
+        font-size: 18px;
+    }
+    label {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    footer p {
+        margin: 0;
+    }
+    input {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: #1c1c1c;
+        padding: 13px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+  </style>
+</head>
 <body>
-    <header>
-        <h1>PasswordManager</h1>
-    </header>
-    <main>
-    </main>
+  <main>
+    <section class="hero">
+      <h1>Welcome to Droideka <br> Password Manager
+        <img class="logo" src="https://i.kym-cdn.com/photos/images/facebook/001/701/591/7da.jpg">
+    </h1>
+      <p>
+        Droideka is a  password manager that generates, stores, and manages passwords securely with advanced encryption. 
+        It can also automatically fill in login information into websites and apps, simplifying online activities and improving security by reducing the risk of password theft and cyber threats. 
+        Protect yourself from sith hackers below!
+    </p>
+    </section>
+    <section>
+    <form>
+        <h2> Information Submission </h2>
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website">
+        <br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <button class="infosubmit" type="submit" id="submit">Submit</button>
+    </form>
+    </h2>
+    </section>
 
-    <br>
+    <br><br>
+    <section>
+      <form>
+        <h2>Random Password Generator</h1>
+	    <input type="text" id="password" readonly>
+	    <br><br>
+	        <button onclick="generatePassword()">Generate Password</button>
+        </form>
+    </section>
+
+    <section class="support">
+      <h2>Support</h2>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Droideka Password Manager</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
-
-
-
+</html>
